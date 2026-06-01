@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment — The Gentleman's Cut</title>
+  <meta name="description" content="Reserve your chair with one of our master barbers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav-sticky">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg>
+        The Gentleman's Cut
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="barbers.html" class="nav-link">Our Barbers</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="book.html" class="nav-link active">Book</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <a href="book.html" class="btn-gold nav-cta" style="padding:10px 24px;font-size:11px;">Book Now</a>
+      <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Services</a><a href="barbers.html" class="nav-link">Our Barbers</a>
+  <a href="gallery.html" class="nav-link">Gallery</a><a href="book.html" class="nav-link active">Book</a><a href="contact.html" class="nav-link">Contact</a>
+  <a href="book.html" class="btn-gold" style="margin-top:16px;width:fit-content;">Book Appointment</a>
+  <div class="mobile-menu-footer"><p>123 Barber Street, New York, NY</p><p class="phone">+1 (555) 123-4567</p></div>
+</div>
+
+<main>
+  <!-- Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <p class="section-subheading">Schedule Your Visit</p>
+        <h1>Book an <span class="text-gold">Appointment</span></h1>
+        <div class="divider-gold"></div>
+        <p>Reserve your chair with one of our master barbers. We'll see you soon.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <section class="bg-mid">
+    <div class="container" style="max-width:680px;">
+
+      <!-- Booking Form -->
+      <div id="book-form-wrap">
+        <div class="form-card">
+          <div class="form-header">
+            <div class="form-header-icon">✂</div>
+            <div>
+              <h2 style="font-family:var(--font-display);font-size:1.25rem;font-weight:700;">Your Details</h2>
+              <p style="font-size:12px;color:var(--muted);">All fields are required</p>
+            </div>
+          </div>
+
+          <form id="booking-form" onsubmit="submitBooking(event)">
+            <!-- Name -->
+            <div class="form-group">
+              <label class="form-label" for="name">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg>
+                Full Name
+              </label>
+              <input class="form-input" id="name" type="text" placeholder="Enter your full name" autocomplete="name" />
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <label class="form-label" for="phone">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.73 12a19.79 19.79 0 0 1-3-8.59A2 2 0 0 1 3.72 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.85 6.85l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Phone Number
+              </label>
+              <input class="form-input" id="phone" type="tel" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+            </div>
+
+            <!-- Service -->
+            <div class="form-group">
+              <label class="form-label" for="service">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg>
+                Service
+              </label>
+              <div class="form-select-wrap">
+                <select class="form-select" id="service">
+                  <option value="" disabled selected>Select a service</option>
+                  <option>Classic Haircut — $35</option>
+                  <option>Beard Trim — $25</option>
+                  <option>Haircut + Beard Combo — $55</option>
+                  <option>Kids Haircut — $22</option>
+                  <option>Hair Styling — $30</option>
+                  <option>Hair Wash &amp; Blow-Dry — $20</option>
+                  <option>Hot Towel Shave — $45</option>
+                  <option>The Gentleman's Full Package — $95</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Date + Time -->
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="date">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Date
+                </label>
+                <input class="form-input" id="date" type="date" style="color-scheme:dark;" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="time">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Time
+                </label>
+                <input class="form-input" id="time" type="time" min="09:00" max="20:00" style="color-scheme:dark;" />
+              </div>
+            </div>
+
+            <!-- Barber -->
+            <div class="form-group">
+              <label class="form-label" for="barber">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg>
+                Preferred Barber
+              </label>
+              <div class="form-select-wrap">
+                <select class="form-select" id="barber">
+                  <option value="" disabled selected>Select a barber</option>
+                  <option>No Preference</option>
+                  <option>Alexander Reid</option>
+                  <option>Marcus Donovan</option>
+                  <option>James Whitfield</option>
+                  <option>Carlos Mendez</option>
+                  <option>Ethan Brooks</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="form-error" class="form-error" style="display:none;">
+              ⚠ Please fill in all required fields.
+            </div>
+
+            <button type="submit" class="btn-gold" style="width:100%;padding:16px;margin-top:8px;font-size:13px;">
+              Confirm Appointment
+            </button>
+
+            <p class="form-note">By booking, you agree to our cancellation policy. Need to cancel? <a href="contact.html">Contact us</a>.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Success State -->
+      <div id="success-wrap" style="display:none;">
+        <div class="form-success">
+          <div class="success-icon">✓</div>
+          <h2 style="font-family:var(--font-display);font-size:2rem;font-weight:700;margin-bottom:16px;">Appointment <span class="text-gold">Confirmed!</span></h2>
+          <p style="color:var(--muted);font-size:14px;margin-bottom:8px;">Your appointment has been booked.</p>
+          <p style="color:var(--muted);font-size:14px;margin-bottom:24px;" id="success-details"></p>
+          <div class="gap-row" style="justify-content:center;">
+            <button onclick="resetForm()" class="btn-outline-gold">Book Another</button>
+            <a href="index.html" class="btn-gold">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Info -->
+  <section class="bg-dark" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="grid-3" style="max-width:760px;margin:0 auto;text-align:center;">
+        <div class="quick-info"><div class="quick-info-icon">⏱</div><div class="quick-info-title">Punctual Service</div><p class="quick-info-desc">We respect your time. Appointments start as scheduled.</p></div>
+        <div class="quick-info"><div class="quick-info-icon">✂</div><div class="quick-info-title">Free Consultation</div><p class="quick-info-desc">Not sure what to book? Come in for a free 10-min consultation.</p></div>
+        <div class="quick-info"><div class="quick-info-icon">📞</div><div class="quick-info-title">Easy Cancellation</div><p class="quick-info-desc">Cancel or reschedule up to 24 hours before your appointment.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg> The Gentleman's Cut</div><p>Premium grooming for the modern gentleman.</p><div class="footer-social"><a href="#">IG</a><a href="#">FB</a><a href="#">TW</a></div></div>
+      <div><div class="footer-heading">Navigation</div><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="barbers.html">Our Barbers</a><a href="gallery.html">Gallery</a><a href="book.html">Book</a><a href="contact.html">Contact</a></div></div>
+      <div><div class="footer-heading">Services</div><div class="footer-links"><a href="services.html">Classic Haircut</a><a href="services.html">Beard Trim</a><a href="services.html">Haircut + Beard</a><a href="services.html">Kids Haircut</a><a href="services.html">Hair Styling</a></div></div>
+      <div><div class="footer-heading">Contact</div><div class="footer-contact-item">123 Barber Street<br>New York, NY 10001</div><div class="footer-contact-item"><a href="tel:+15551234567">+1 (555) 123-4567</a></div><div class="footer-contact-item"><a href="mailto:hello@gentlemanscut.com">hello@gentlemanscut.com</a></div></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2024 The Gentleman's Cut. All rights reserved.</span><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="float-whatsapp" title="Chat on WhatsApp">💬</a>
+
+<script>
+function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+
+// Set min date to today
+document.getElementById('date').min = new Date().toISOString().split('T')[0];
+
+function submitBooking(e) {
+  e.preventDefault();
+  var name = document.getElementById('name').value.trim();
+  var phone = document.getElementById('phone').value.trim();
+  var service = document.getElementById('service').value;
+  var date = document.getElementById('date').value;
+  var time = document.getElementById('time').value;
+  var barber = document.getElementById('barber').value;
+  var err = document.getElementById('form-error');
+
+  if (!name || !phone || !service || !date || !time || !barber) {
+    err.style.display = 'flex';
+    return;
+  }
+  err.style.display = 'none';
+
+  document.getElementById('success-details').textContent =
+    'We\'ve noted your preference for ' + barber + ' on ' + date + ' at ' + time + '. We\'ll reach you at ' + phone + ' to confirm.';
+
+  document.getElementById('book-form-wrap').style.display = 'none';
+  document.getElementById('success-wrap').style.display = 'block';
+}
+
+function resetForm() {
+  document.getElementById('booking-form').reset();
+  document.getElementById('form-error').style.display = 'none';
+  document.getElementById('book-form-wrap').style.display = 'block';
+  document.getElementById('success-wrap').style.display = 'none';
+}
+</script>
+</body>
+</html>

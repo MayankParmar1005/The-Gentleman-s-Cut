@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Barbers — The Gentleman's Cut</title>
+  <meta name="description" content="Meet our five master barbers — each a craftsman in their specialty." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav-sticky">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg>
+        The Gentleman's Cut
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="barbers.html" class="nav-link active">Our Barbers</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="book.html" class="nav-link">Book</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <a href="book.html" class="btn-gold nav-cta" style="padding:10px 24px;font-size:11px;">Book Now</a>
+      <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Services</a><a href="barbers.html" class="nav-link active">Our Barbers</a>
+  <a href="gallery.html" class="nav-link">Gallery</a><a href="book.html" class="nav-link">Book</a><a href="contact.html" class="nav-link">Contact</a>
+  <a href="book.html" class="btn-gold" style="margin-top:16px;width:fit-content;">Book Appointment</a>
+  <div class="mobile-menu-footer"><p>123 Barber Street, New York, NY</p><p class="phone">+1 (555) 123-4567</p></div>
+</div>
+
+<main>
+  <!-- Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <p class="section-subheading">Our Team</p>
+        <h1>Master <span class="text-gold">Barbers</span></h1>
+        <div class="divider-gold"></div>
+        <p>Five exceptional craftsmen, each a master in their specialty. United by a passion for precision, style, and the art of grooming.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barbers Grid -->
+  <section class="bg-mid">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card barber-card">
+          <div class="barber-img">
+            <img src="../assets/generated/barber-1.dim_600x800.jpg" alt="Alexander Reid" />
+            <div class="barber-img-overlay"></div>
+            <div class="barber-badge">12+ yrs</div>
+            <div style="position:absolute;bottom:16px;left:0;right:0;padding:0 16px;">
+              <a href="book.html" class="btn-gold" style="width:100%;opacity:0;transition:opacity 0.3s;" onmouseenter="this.style.opacity=1" onmouseleave="this.style.opacity=0">Book with Alex</a>
+            </div>
+          </div>
+          <div class="barber-info">
+            <div class="barber-name">Alexander Reid</div>
+            <div class="barber-specialty">✂ Classic &amp; Modern Cuts</div>
+            <div class="barber-exp">12 years of professional experience</div>
+          </div>
+        </div>
+        <div class="card barber-card">
+          <div class="barber-img">
+            <img src="../assets/generated/barber-2.dim_600x800.jpg" alt="Marcus Donovan" />
+            <div class="barber-img-overlay"></div>
+            <div class="barber-badge">9+ yrs</div>
+          </div>
+          <div class="barber-info">
+            <div class="barber-name">Marcus Donovan</div>
+            <div class="barber-specialty">✂ Beard Sculpting &amp; Shaping</div>
+            <div class="barber-exp">9 years of professional experience</div>
+          </div>
+        </div>
+        <div class="card barber-card">
+          <div class="barber-img">
+            <img src="../assets/generated/barber-3.dim_600x800.jpg" alt="James Whitfield" />
+            <div class="barber-img-overlay"></div>
+            <div class="barber-badge">7+ yrs</div>
+          </div>
+          <div class="barber-info">
+            <div class="barber-name">James Whitfield</div>
+            <div class="barber-specialty">✂ Fade &amp; Taper Specialist</div>
+            <div class="barber-exp">7 years of professional experience</div>
+          </div>
+        </div>
+        <div class="card barber-card">
+          <div class="barber-img">
+            <img src="../assets/generated/barber-4.dim_600x800.jpg" alt="Carlos Mendez" />
+            <div class="barber-img-overlay"></div>
+            <div class="barber-badge">6+ yrs</div>
+          </div>
+          <div class="barber-info">
+            <div class="barber-name">Carlos Mendez</div>
+            <div class="barber-specialty">✂ Creative &amp; Textured Styles</div>
+            <div class="barber-exp">6 years of professional experience</div>
+          </div>
+        </div>
+        <div class="card barber-card">
+          <div class="barber-img">
+            <img src="../assets/generated/barber-5.dim_600x800.jpg" alt="Ethan Brooks" />
+            <div class="barber-img-overlay"></div>
+            <div class="barber-badge">11+ yrs</div>
+          </div>
+          <div class="barber-info">
+            <div class="barber-name">Ethan Brooks</div>
+            <div class="barber-specialty">✂ Hot Towel &amp; Straight Razor</div>
+            <div class="barber-exp">11 years of professional experience</div>
+          </div>
+        </div>
+        <div class="card service-card text-center" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <div class="service-icon" style="margin-left:auto;margin-right:auto;">✂</div>
+          <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:700;margin-bottom:12px;">Join Our <span class="text-gold">Team</span></h3>
+          <p class="service-desc">Are you a passionate barber looking to elevate your craft? We're always looking for exceptional talent.</p>
+          <a href="mailto:careers@gentlemanscut.com" class="btn-outline-gold">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-dark text-center">
+    <div class="container" style="max-width:600px;">
+      <h2 class="section-heading">Ready to Book with a <span class="text-gold">Master?</span></h2>
+      <p class="text-muted mt-4">Choose your preferred barber and schedule your appointment today.</p>
+      <div class="mt-8"><a href="book.html" class="btn-gold">Book Appointment</a></div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg> The Gentleman's Cut</div>
+        <p>Premium grooming for the modern gentleman.</p>
+        <div class="footer-social"><a href="#">IG</a><a href="#">FB</a><a href="#">TW</a></div>
+      </div>
+      <div><div class="footer-heading">Navigation</div><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="barbers.html">Our Barbers</a><a href="gallery.html">Gallery</a><a href="book.html">Book</a><a href="contact.html">Contact</a></div></div>
+      <div><div class="footer-heading">Services</div><div class="footer-links"><a href="services.html">Classic Haircut</a><a href="services.html">Beard Trim</a><a href="services.html">Haircut + Beard</a><a href="services.html">Kids Haircut</a><a href="services.html">Hair Styling</a></div></div>
+      <div><div class="footer-heading">Contact</div><div class="footer-contact-item">123 Barber Street<br>New York, NY 10001</div><div class="footer-contact-item"><a href="tel:+15551234567">+1 (555) 123-4567</a></div><div class="footer-contact-item"><a href="mailto:hello@gentlemanscut.com">hello@gentlemanscut.com</a></div></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2024 The Gentleman's Cut. All rights reserved.</span><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="float-whatsapp" title="Chat on WhatsApp">💬</a>
+<script>function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }</script>
+</body>
+</html>

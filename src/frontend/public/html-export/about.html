@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — The Gentleman's Cut</title>
+  <meta name="description" content="Our story — a legacy of craftsmanship, precision, and gentlemanly service since 2010." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ─── Navigation ─────────────────────────────────────────── -->
+<nav class="nav-sticky">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg>
+        The Gentleman's Cut
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="barbers.html" class="nav-link">Our Barbers</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="book.html" class="nav-link">Book</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <a href="book.html" class="btn-gold nav-cta" style="padding:10px 24px;font-size:11px;">Book Now</a>
+      <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="about.html" class="nav-link active">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="barbers.html" class="nav-link">Our Barbers</a>
+  <a href="gallery.html" class="nav-link">Gallery</a>
+  <a href="book.html" class="nav-link">Book</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <a href="book.html" class="btn-gold" style="margin-top:16px;width:fit-content;">Book Appointment</a>
+  <div class="mobile-menu-footer">
+    <p>123 Barber Street, New York, NY</p>
+    <p class="phone">+1 (555) 123-4567</p>
+  </div>
+</div>
+
+<main>
+  <!-- Page Header -->
+  <div class="page-header" style="background-image:none;">
+    <div class="container">
+      <div class="page-header-inner">
+        <p class="section-subheading">About Us</p>
+        <h1>Our <span class="text-gold">Story</span></h1>
+        <div class="divider-gold"></div>
+        <p>A legacy of craftsmanship, precision, and gentlemanly service since 2010.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-icon">🏆</div>
+          <div class="stat-value">15+</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div>
+          <div class="stat-icon">👥</div>
+          <div class="stat-value">5,000+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div>
+          <div class="stat-icon">✂</div>
+          <div class="stat-value">5</div>
+          <div class="stat-label">Master Barbers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story Section -->
+  <section class="bg-mid">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-img-wrap">
+          <img src="../assets/generated/shop-interior.dim_1200x800.jpg" alt="The Gentleman's Cut interior" />
+          <div class="story-img-frame"></div>
+          <div class="story-est-badge">Est. 2010</div>
+        </div>
+        <div>
+          <p class="section-subheading">Who We Are</p>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin:12px 0;">The Art of the <span class="text-gold">Perfect Cut</span></h2>
+          <div class="divider-gold left" style="margin-bottom:24px;margin-top:16px;"></div>
+          <p class="text-muted" style="line-height:1.8;margin-bottom:16px;">
+            The Gentleman's Cut was born from a simple yet powerful belief: every man deserves to look and feel his absolute best. Founded in 2010 by master barber Jonathan Cross, our shop has grown from a single chair to one of New York's most celebrated grooming destinations.
+          </p>
+          <p class="text-muted" style="line-height:1.8;margin-bottom:32px;">
+            We combine the timeless traditions of classic barbering — the hot towel, the straight razor, the meticulous detail work — with the freshness and versatility demanded by today's modern gentleman. Every visit is a ritual, every cut a masterpiece.
+          </p>
+          <a href="book.html" class="btn-gold">Book Your Experience</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="bg-dark">
+    <div class="container">
+      <div class="story-grid">
+        <div>
+          <p class="section-subheading">Our Mission</p>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;margin:12px 0;">
+            Elevating the Standard of <span class="text-gold">Men's Grooming</span>
+          </h2>
+          <div class="divider-gold left" style="margin-bottom:24px;margin-top:16px;"></div>
+          <p class="text-muted" style="line-height:1.8;margin-bottom:16px;">
+            Our mission is to provide an unparalleled grooming experience that honors the craft of barbering while embracing modern style. We believe in creating a welcoming space where every gentleman feels valued, respected, and leaves looking his very best.
+          </p>
+          <p class="text-muted" style="line-height:1.8;">
+            We invest in ongoing education for our barbers, sourcing only the finest tools and premium products to ensure that every service we deliver is nothing short of exceptional.
+          </p>
+        </div>
+        <div>
+          <p class="section-subheading">Our Values</p>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;margin:12px 0;">
+            The <span class="text-gold">Principles</span> We Live By
+          </h2>
+          <div class="divider-gold left" style="margin-bottom:24px;margin-top:16px;"></div>
+          <ul class="values-list">
+            <li><span class="check">✓</span><span>Precision cuts tailored to each individual</span></li>
+            <li><span class="check">✓</span><span>Premium products from top grooming brands</span></li>
+            <li><span class="check">✓</span><span>Clean, hygienic tools sterilized between every client</span></li>
+            <li><span class="check">✓</span><span>Warm, welcoming atmosphere for all gentlemen</span></li>
+            <li><span class="check">✓</span><span>Continuous education in modern barbering techniques</span></li>
+            <li><span class="check">✓</span><span>Personalized consultations with every visit</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-mid">
+    <div class="container text-center" style="max-width:700px;">
+      <h2 class="section-heading">Come Experience <span class="text-gold">The Difference</span></h2>
+      <p class="text-muted mt-4" style="font-size:1.05rem;">Join thousands of satisfied clients who trust us with their grooming needs.</p>
+      <div class="gap-row mt-8" style="justify-content:center;">
+        <a href="book.html" class="btn-gold">Book Appointment</a>
+        <a href="barbers.html" class="btn-outline-gold">Meet Our Team</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg>
+          The Gentleman's Cut
+        </div>
+        <p>Premium grooming for the modern gentleman. Where tradition meets contemporary style.</p>
+        <div class="footer-social"><a href="#">IG</a><a href="#">FB</a><a href="#">TW</a></div>
+      </div>
+      <div>
+        <div class="footer-heading">Navigation</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a>
+          <a href="barbers.html">Our Barbers</a><a href="gallery.html">Gallery</a><a href="book.html">Book</a><a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <div class="footer-links">
+          <a href="services.html">Classic Haircut</a><a href="services.html">Beard Trim</a>
+          <a href="services.html">Haircut + Beard</a><a href="services.html">Kids Haircut</a><a href="services.html">Hair Styling</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <div class="footer-contact-item">123 Barber Street<br>New York, NY 10001</div>
+        <div class="footer-contact-item"><a href="tel:+15551234567">+1 (555) 123-4567</a></div>
+        <div class="footer-contact-item"><a href="mailto:hello@gentlemanscut.com">hello@gentlemanscut.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 The Gentleman's Cut. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="float-whatsapp" title="Chat on WhatsApp">💬</a>
+
+<script>
+function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+</script>
+</body>
+</html>

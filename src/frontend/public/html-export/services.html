@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services & Pricing — The Gentleman's Cut</title>
+  <meta name="description" content="Our full range of premium grooming services and pricing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav-sticky">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg>
+        The Gentleman's Cut
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="barbers.html" class="nav-link">Our Barbers</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="book.html" class="nav-link">Book</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <a href="book.html" class="btn-gold nav-cta" style="padding:10px 24px;font-size:11px;">Book Now</a>
+      <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link active">Services</a>
+  <a href="barbers.html" class="nav-link">Our Barbers</a>
+  <a href="gallery.html" class="nav-link">Gallery</a>
+  <a href="book.html" class="nav-link">Book</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <a href="book.html" class="btn-gold" style="margin-top:16px;width:fit-content;">Book Appointment</a>
+  <div class="mobile-menu-footer"><p>123 Barber Street, New York, NY</p><p class="phone">+1 (555) 123-4567</p></div>
+</div>
+
+<main>
+  <!-- Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <p class="section-subheading">What We Offer</p>
+        <h1>Services &amp; <span class="text-gold">Pricing</span></h1>
+        <div class="divider-gold"></div>
+        <p>Every service is a bespoke experience crafted by our master barbers using the finest techniques and premium products.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Grid -->
+  <section class="bg-mid">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card service-card">
+          <div class="service-icon">✂</div>
+          <div class="service-name">Classic Haircut</div>
+          <p class="service-desc">A precision cut tailored to your face shape and personal style. Includes a consultation, wash, cut, and finish.</p>
+          <div class="service-price-row">
+            <span class="service-price-label">Starting from</span>
+            <span class="service-price">$35</span>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">🪒</div>
+          <div class="service-name">Beard Trim</div>
+          <p class="service-desc">Expert beard shaping, lining, and conditioning to keep you looking sharp and distinguished.</p>
+          <div class="service-price-row">
+            <span class="service-price-label">Starting from</span>
+            <span class="service-price">$25</span>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">✦</div>
+          <div class="service-name">Haircut + Beard Combo</div>
+          <p class="service-desc">Our most popular service — a full cut combined with beard sculpting for a complete transformation.</p>
+          <div class="service-price-row">
+            <span class="service-price-label">Starting from</span>
+            <span class="service-price">$55</span>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">👦</div>
+          <div class="service-name">Kids Haircut</div>
+          <p class="service-desc">Gentle, patient service for the young gentlemen in your life. Ages 12 and under.</p>
+          <div class="service-price-row">
+            <span class="service-price-label">Starting from</span>
+            <span class="service-price">$22</span>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">💫</div>
+          <div class="service-name">Hair Styling</div>
+          <p class="service-desc">Professional styling with premium products. Perfect for special occasions or a polished everyday look.</p>
+          <div class="service-price-row">
+            <span class="service-price-label">Starting from</span>
+            <span class="service-price">$30</span>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">💧</div>
+          <div class="service-name">Hair Wash &amp; Blow-Dry</div>
+          <p class="service-desc">A luxurious scalp massage, deep cleanse, and professional blow-dry finish.</p>
+          <div class="service-price-row">
+            <span class="service-price-label">Starting from</span>
+            <span class="service-price">$20</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Package -->
+  <section class="bg-dark" style="padding:48px 0;">
+    <div class="container">
+      <div class="premium-banner">
+        <div class="premium-banner-inner">
+          <div>
+            <div class="premium-star-row">
+              <span style="color:var(--gold);">★</span>
+              <span class="premium-label">Premium Experience</span>
+              <span style="color:var(--gold);">★</span>
+            </div>
+            <div class="premium-title">The Gentleman's <span class="text-gold">Full Package</span></div>
+            <p class="premium-desc">Haircut + Hot Towel Shave + Beard Sculpt + Scalp Massage. The ultimate grooming ritual for the discerning gentleman.</p>
+          </div>
+          <div class="premium-price-box">
+            <div class="premium-price-label">Package Price</div>
+            <div class="premium-price">$95</div>
+            <a href="book.html" class="btn-gold" style="margin-top:16px;display:block;">Book Package</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-mid">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subheading">The Difference</p>
+        <h2 class="section-heading">Why Choose <span class="text-gold">Us</span></h2>
+      </div>
+      <div class="grid-3">
+        <div class="why-item">
+          <div class="why-icon">✦</div>
+          <div class="why-title">Master Craftsmen</div>
+          <p class="why-desc">Our barbers bring decades of combined expertise and continually refine their skills.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">◆</div>
+          <div class="why-title">Premium Products</div>
+          <p class="why-desc">We use only the finest grooming products from leading luxury brands worldwide.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">◈</div>
+          <div class="why-title">Personalized Service</div>
+          <p class="why-desc">Every client receives a tailored consultation to achieve their ideal look.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-dark text-center">
+    <div class="container" style="max-width:600px;">
+      <h2 class="section-heading">Ready to Book Your <span class="text-gold">Service?</span></h2>
+      <div class="mt-8">
+        <a href="book.html" class="btn-gold">Book Appointment</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg> The Gentleman's Cut</div>
+        <p>Premium grooming for the modern gentleman. Where tradition meets contemporary style.</p>
+        <div class="footer-social"><a href="#">IG</a><a href="#">FB</a><a href="#">TW</a></div>
+      </div>
+      <div>
+        <div class="footer-heading">Navigation</div>
+        <div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="barbers.html">Our Barbers</a><a href="gallery.html">Gallery</a><a href="book.html">Book</a><a href="contact.html">Contact</a></div>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <div class="footer-links"><a href="services.html">Classic Haircut</a><a href="services.html">Beard Trim</a><a href="services.html">Haircut + Beard</a><a href="services.html">Kids Haircut</a><a href="services.html">Hair Styling</a></div>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <div class="footer-contact-item">123 Barber Street<br>New York, NY 10001</div>
+        <div class="footer-contact-item"><a href="tel:+15551234567">+1 (555) 123-4567</a></div>
+        <div class="footer-contact-item"><a href="mailto:hello@gentlemanscut.com">hello@gentlemanscut.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 The Gentleman's Cut. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="float-whatsapp" title="Chat on WhatsApp">💬</a>
+<script>function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }</script>
+</body>
+</html>

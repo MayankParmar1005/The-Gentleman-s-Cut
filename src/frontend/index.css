@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Fonts (loaded via index.html link tag) ─────────────────────────── */
+
+/* ─── Design Tokens ───────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --radius: 0.25rem;
+
+    /* Barber shop dark theme — primary is always dark */
+    --background: 0.08 0 0;
+    --foreground: 0.96 0.01 95;
+
+    --card: 0.11 0 0;
+    --card-foreground: 0.96 0.01 95;
+
+    --popover: 0.13 0 0;
+    --popover-foreground: 0.96 0.01 95;
+
+    /* Gold primary */
+    --primary: 0.72 0.12 82;
+    --primary-foreground: 0.08 0 0;
+
+    --secondary: 0.18 0 0;
+    --secondary-foreground: 0.96 0.01 95;
+
+    --muted: 0.15 0 0;
+    --muted-foreground: 0.6 0.01 60;
+
+    --accent: 0.72 0.12 82;
+    --accent-foreground: 0.08 0 0;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.22 0 0;
+    --input: 0.18 0 0;
+    --ring: 0.72 0.12 82;
+
+    /* Gold custom tokens */
+    --gold: 0.72 0.12 82;
+    --gold-light: 0.82 0.1 85;
+    --gold-dim: 0.55 0.09 80;
+
+    /* Section backgrounds */
+    --section-dark: 0.07 0 0;
+    --section-mid: 0.11 0 0;
+    --section-card: 0.14 0 0;
+
+    --chart-1: 0.72 0.12 82;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.11 0 0;
+    --sidebar-foreground: 0.96 0.01 95;
+    --sidebar-primary: 0.72 0.12 82;
+    --sidebar-primary-foreground: 0.08 0 0;
+    --sidebar-accent: 0.18 0 0;
+    --sidebar-accent-foreground: 0.96 0.01 95;
+    --sidebar-border: 0.22 0 0;
+    --sidebar-ring: 0.72 0.12 82;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ─── Utilities ───────────────────────────────────────────────────────── */
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  .font-body {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  .text-gold {
+    color: oklch(var(--gold));
+  }
+
+  .text-gold-light {
+    color: oklch(var(--gold-light));
+  }
+
+  .bg-gold {
+    background-color: oklch(var(--gold));
+  }
+
+  .border-gold {
+    border-color: oklch(var(--gold));
+  }
+
+  .bg-section-dark {
+    background-color: oklch(var(--section-dark));
+  }
+
+  .bg-section-mid {
+    background-color: oklch(var(--section-mid));
+  }
+
+  .bg-section-card {
+    background-color: oklch(var(--section-card));
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 20px oklch(var(--gold) / 0.3);
+  }
+
+  .gold-glow-hover:hover {
+    box-shadow: 0 0 30px oklch(var(--gold) / 0.4);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, oklch(var(--gold)) 0%, oklch(var(--gold-light)) 100%);
+  }
+
+  .overlay-dark {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+  }
+
+  .divider-gold {
+    width: 60px;
+    height: 2px;
+    background-color: oklch(var(--gold));
+  }
+}
+
+/* ─── Global Component Overrides ─────────────────────────────────────── */
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-8 py-3;
+    @apply font-body font-semibold tracking-widest uppercase text-sm;
+    @apply bg-gold text-background;
+    @apply transition-all duration-300;
+    letter-spacing: 0.12em;
+  }
+
+  .btn-gold:hover {
+    @apply gold-glow;
+    filter: brightness(1.1);
+  }
+
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center px-8 py-3;
+    @apply font-body font-semibold tracking-widest uppercase text-sm;
+    @apply border border-gold text-gold bg-transparent;
+    @apply transition-all duration-300;
+    letter-spacing: 0.12em;
+  }
+
+  .btn-outline-gold:hover {
+    @apply bg-gold text-background gold-glow;
+  }
+
+  .section-heading {
+    @apply font-display text-4xl md:text-5xl font-bold;
+    @apply text-foreground;
+  }
+
+  .section-subheading {
+    @apply font-body text-sm tracking-widest uppercase text-gold;
+    letter-spacing: 0.2em;
+  }
+
+  .card-barber {
+    @apply relative overflow-hidden;
+    @apply bg-section-card border border-border;
+    @apply transition-all duration-300;
+  }
+
+  .card-barber:hover {
+    @apply border-gold gold-glow;
+    transform: translateY(-4px);
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply font-body text-sm tracking-widest uppercase;
+    @apply transition-colors duration-200;
+    color: oklch(var(--foreground) / 0.7);
+    letter-spacing: 0.12em;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    @apply text-gold;
+  }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — The Gentleman's Cut</title>
+  <meta name="description" content="A visual showcase of our craft — from precision cuts to masterful beard work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav-sticky">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg>
+        The Gentleman's Cut
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="barbers.html" class="nav-link">Our Barbers</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="book.html" class="nav-link">Book</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <a href="book.html" class="btn-gold nav-cta" style="padding:10px 24px;font-size:11px;">Book Now</a>
+      <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Services</a><a href="barbers.html" class="nav-link">Our Barbers</a>
+  <a href="gallery.html" class="nav-link active">Gallery</a><a href="book.html" class="nav-link">Book</a><a href="contact.html" class="nav-link">Contact</a>
+  <a href="book.html" class="btn-gold" style="margin-top:16px;width:fit-content;">Book Appointment</a>
+  <div class="mobile-menu-footer"><p>123 Barber Street, New York, NY</p><p class="phone">+1 (555) 123-4567</p></div>
+</div>
+
+<main>
+  <!-- Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <p class="section-subheading">Portfolio</p>
+        <h1>Our <span class="text-gold">Gallery</span></h1>
+        <div class="divider-gold"></div>
+        <p>A visual showcase of our craft — from precision cuts to masterful beard work.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter + Gallery -->
+  <section class="bg-dark">
+    <div class="container">
+      <div class="gallery-filters" id="gallery-filters">
+        <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+        <button class="filter-btn" onclick="filterGallery('Haircuts', this)">Haircuts</button>
+        <button class="filter-btn" onclick="filterGallery('Beard', this)">Beard</button>
+        <button class="filter-btn" onclick="filterGallery('Styling', this)">Styling</button>
+        <button class="filter-btn" onclick="filterGallery('Shave', this)">Shave</button>
+        <button class="filter-btn" onclick="filterGallery('Interior', this)">Interior</button>
+        <button class="filter-btn" onclick="filterGallery('Tools', this)">Tools</button>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-item" data-cat="Haircuts" onclick="openLightbox('../assets/generated/gallery-haircut-1.dim_800x800.jpg','Haircuts','The Classic Taper')">
+          <img src="../assets/generated/gallery-haircut-1.dim_800x800.jpg" alt="Precision haircut" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><div class="gallery-cat">Haircuts</div><div class="gallery-title">The Classic Taper</div></div></div>
+        </div>
+        <div class="gallery-item" data-cat="Beard" onclick="openLightbox('../assets/generated/gallery-beard-1.dim_800x800.jpg','Beard','Beard Sculpture')">
+          <img src="../assets/generated/gallery-beard-1.dim_800x800.jpg" alt="Beard styling" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><div class="gallery-cat">Beard</div><div class="gallery-title">Beard Sculpture</div></div></div>
+        </div>
+        <div class="gallery-item" data-cat="Tools" onclick="openLightbox('../assets/generated/gallery-tools.dim_800x800.jpg','Tools','Tools of the Trade')">
+          <img src="../assets/generated/gallery-tools.dim_800x800.jpg" alt="Professional tools" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><div class="gallery-cat">Tools</div><div class="gallery-title">Tools of the Trade</div></div></div>
+        </div>
+        <div class="gallery-item" data-cat="Styling" onclick="openLightbox('../assets/generated/gallery-styling.dim_800x800.jpg','Styling','Modern Pompadour')">
+          <img src="../assets/generated/gallery-styling.dim_800x800.jpg" alt="Hair styling" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><div class="gallery-cat">Styling</div><div class="gallery-title">Modern Pompadour</div></div></div>
+        </div>
+        <div class="gallery-item" data-cat="Shave" onclick="openLightbox('../assets/generated/gallery-shave.dim_800x800.jpg','Shave','The Royal Shave')">
+          <img src="../assets/generated/gallery-shave.dim_800x800.jpg" alt="Hot towel shave" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><div class="gallery-cat">Shave</div><div class="gallery-title">The Royal Shave</div></div></div>
+        </div>
+        <div class="gallery-item" data-cat="Interior" onclick="openLightbox('../assets/generated/gallery-shop.dim_800x800.jpg','Interior','Our Space')">
+          <img src="../assets/generated/gallery-shop.dim_800x800.jpg" alt="Shop interior" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><div class="gallery-cat">Interior</div><div class="gallery-title">Our Space</div></div></div>
+        </div>
+        <div class="gallery-item" data-cat="Interior" onclick="openLightbox('../assets/generated/shop-interior.dim_1200x800.jpg','Interior','The Gentleman\'s Cut')">
+          <img src="../assets/generated/shop-interior.dim_1200x800.jpg" alt="Premium interior" style="aspect-ratio:1;object-fit:cover;" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><div class="gallery-cat">Interior</div><div class="gallery-title">The Gentleman's Cut</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram -->
+  <section class="bg-mid text-center">
+    <div class="container" style="max-width:600px;">
+      <p class="section-subheading">Follow Us</p>
+      <h2 style="font-family:var(--font-display);font-size:2rem;font-weight:700;margin:12px 0;">@GentlemansCut on <span class="text-gold">Instagram</span></h2>
+      <p class="text-muted mt-4" style="font-size:14px;">Follow us for daily inspiration and behind-the-scenes content.</p>
+      <div class="mt-8"><a href="https://instagram.com" target="_blank" rel="noopener" class="btn-outline-gold">Follow on Instagram</a></div>
+    </div>
+  </section>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption">
+      <div class="gallery-cat" id="lightbox-cat"></div>
+      <div class="gallery-title" id="lightbox-title"></div>
+    </div>
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg> The Gentleman's Cut</div><p>Premium grooming for the modern gentleman.</p><div class="footer-social"><a href="#">IG</a><a href="#">FB</a><a href="#">TW</a></div></div>
+      <div><div class="footer-heading">Navigation</div><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="barbers.html">Our Barbers</a><a href="gallery.html">Gallery</a><a href="book.html">Book</a><a href="contact.html">Contact</a></div></div>
+      <div><div class="footer-heading">Services</div><div class="footer-links"><a href="services.html">Classic Haircut</a><a href="services.html">Beard Trim</a><a href="services.html">Haircut + Beard</a><a href="services.html">Kids Haircut</a><a href="services.html">Hair Styling</a></div></div>
+      <div><div class="footer-heading">Contact</div><div class="footer-contact-item">123 Barber Street<br>New York, NY 10001</div><div class="footer-contact-item"><a href="tel:+15551234567">+1 (555) 123-4567</a></div><div class="footer-contact-item"><a href="mailto:hello@gentlemanscut.com">hello@gentlemanscut.com</a></div></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2024 The Gentleman's Cut. All rights reserved.</span><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="float-whatsapp" title="Chat on WhatsApp">💬</a>
+
+<script>
+function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#gallery-grid .gallery-item').forEach(item => {
+    if (cat === 'all' || item.dataset.cat === cat) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+function openLightbox(src, cat, title) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-cat').textContent = cat;
+  document.getElementById('lightbox-title').textContent = title;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>

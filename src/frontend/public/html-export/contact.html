@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — The Gentleman's Cut</title>
+  <meta name="description" content="Get in touch with The Gentleman's Cut. Address, phone, hours, and map." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav-sticky">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg>
+        The Gentleman's Cut
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="barbers.html" class="nav-link">Our Barbers</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="book.html" class="nav-link">Book</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </div>
+      <a href="book.html" class="btn-gold nav-cta" style="padding:10px 24px;font-size:11px;">Book Now</a>
+      <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="barbers.html" class="nav-link">Our Barbers</a>
+  <a href="gallery.html" class="nav-link">Gallery</a>
+  <a href="book.html" class="nav-link">Book</a>
+  <a href="contact.html" class="nav-link active">Contact</a>
+  <a href="book.html" class="btn-gold" style="margin-top:16px;width:fit-content;">Book Appointment</a>
+  <div class="mobile-menu-footer">
+    <p>123 Barber Street, New York, NY</p>
+    <p class="phone">+1 (555) 123-4567</p>
+  </div>
+</div>
+
+<main>
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="page-header-inner">
+        <p class="section-subheading">Get in Touch</p>
+        <h1>Contact <span class="text-gold">Us</span></h1>
+        <div class="divider-gold"></div>
+        <p>We'd love to hear from you. Reach us any way you like.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Info + Map -->
+  <section class="bg-mid">
+    <div class="container">
+      <div class="grid-2" style="gap:48px;align-items:start;">
+
+        <!-- Left: Contact Details -->
+        <div>
+          <p class="section-subheading">Reach Us</p>
+          <h2 style="font-family:var(--font-display);font-size:2rem;font-weight:700;margin:12px 0 24px;">
+            We're Here for <span class="text-gold">You</span>
+          </h2>
+
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:24px;">
+            <!-- Address -->
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-label">Address</div>
+                <div class="contact-value">123 Barber Street, Manhattan<br>New York, NY 10001</div>
+              </div>
+            </div>
+            <!-- Phone -->
+            <div class="contact-card">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value"><a href="tel:+15551234567">+1 (555) 123-4567</a></div>
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="contact-card">
+              <div class="contact-icon">✉</div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value"><a href="mailto:hello@gentlemanscut.com">hello@gentlemanscut.com</a></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="whatsapp-btn">
+            <span style="font-size:22px;">💬</span>
+            <div>
+              <div class="whatsapp-label">Chat on WhatsApp</div>
+              <div class="whatsapp-sublabel">Typically replies in minutes</div>
+            </div>
+          </a>
+
+          <!-- Book CTA -->
+          <div style="margin-top:24px;">
+            <a href="book.html" class="btn-gold">Book an Appointment</a>
+          </div>
+        </div>
+
+        <!-- Right: Map -->
+        <div>
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0!2d-73.9857!3d40.7484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjIiTiA3M8KwNTknMDguNSJX!5e0!3m2!1sen!2sus!4v1234567890"
+              title="The Gentleman's Cut location"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="map-badge">
+              <div class="map-badge-name">The Gentleman's Cut</div>
+              <div class="map-badge-addr">123 Barber Street, NY</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Opening Hours -->
+  <section class="bg-dark">
+    <div class="container">
+      <div style="max-width:600px;margin:0 auto;">
+        <div class="text-center" style="margin-bottom:40px;">
+          <p class="section-subheading">Schedule</p>
+          <h2 class="section-heading" style="margin:12px 0;">Opening <span class="text-gold">Hours</span></h2>
+          <div class="divider-gold"></div>
+        </div>
+
+        <div class="hours-table" id="hours-table">
+          <div class="hours-row" data-day="Monday">
+            <div class="hours-day"><span>Monday</span></div>
+            <div class="hours-time">9:00 AM – 8:00 PM</div>
+          </div>
+          <div class="hours-row" data-day="Tuesday">
+            <div class="hours-day"><span>Tuesday</span></div>
+            <div class="hours-time">9:00 AM – 8:00 PM</div>
+          </div>
+          <div class="hours-row" data-day="Wednesday">
+            <div class="hours-day"><span>Wednesday</span></div>
+            <div class="hours-time">9:00 AM – 8:00 PM</div>
+          </div>
+          <div class="hours-row" data-day="Thursday">
+            <div class="hours-day"><span>Thursday</span></div>
+            <div class="hours-time">9:00 AM – 8:00 PM</div>
+          </div>
+          <div class="hours-row" data-day="Friday">
+            <div class="hours-day"><span>Friday</span></div>
+            <div class="hours-time">9:00 AM – 8:00 PM</div>
+          </div>
+          <div class="hours-row" data-day="Saturday">
+            <div class="hours-day"><span>Saturday</span></div>
+            <div class="hours-time">9:00 AM – 8:00 PM</div>
+          </div>
+          <div class="hours-row" data-day="Sunday">
+            <div class="hours-day"><span>Sunday</span></div>
+            <div class="hours-time">10:00 AM – 6:00 PM</div>
+          </div>
+        </div>
+
+        <p class="hours-note">* Hours may vary on public holidays. Call ahead to confirm.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)"><path d="M20 9l-7-7-7 7"/><path d="m6 12 6 6 6-6"/></svg>
+          The Gentleman's Cut
+        </div>
+        <p>Premium grooming for the modern gentleman. Where tradition meets contemporary style.</p>
+        <div class="footer-social"><a href="#" title="Instagram">IG</a><a href="#" title="Facebook">FB</a><a href="#" title="Twitter">TW</a></div>
+      </div>
+      <div>
+        <div class="footer-heading">Navigation</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a><a href="about.html">About Us</a>
+          <a href="services.html">Services</a><a href="barbers.html">Our Barbers</a>
+          <a href="gallery.html">Gallery</a><a href="book.html">Book</a><a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <div class="footer-links">
+          <a href="services.html">Classic Haircut</a><a href="services.html">Beard Trim</a>
+          <a href="services.html">Haircut + Beard</a><a href="services.html">Kids Haircut</a><a href="services.html">Hair Styling</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <div class="footer-contact-item">123 Barber Street<br>New York, NY 10001</div>
+        <div class="footer-contact-item"><a href="tel:+15551234567">+1 (555) 123-4567</a></div>
+        <div class="footer-contact-item"><a href="mailto:hello@gentlemanscut.com">hello@gentlemanscut.com</a></div>
+        <div class="footer-contact-item">Mon–Sat: 9am–8pm · Sun: 10am–6pm</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 The Gentleman's Cut. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="float-whatsapp" title="Chat on WhatsApp">💬</a>
+
+<script>
+function toggleMobileMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+// Highlight today's hours row
+(function() {
+  var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var today = days[new Date().getDay()];
+  var rows = document.querySelectorAll('.hours-row');
+  rows.forEach(function(row) {
+    if (row.dataset.day === today) {
+      row.classList.add('today');
+      var daySpan = row.querySelector('.hours-day');
+      var timeDiv = row.querySelector('.hours-time');
+      daySpan.classList.add('today-day');
+      timeDiv.classList.add('today-time');
+      var dot = document.createElement('span');
+      dot.className = 'today-dot';
+      daySpan.insertBefore(dot, daySpan.firstChild);
+      var tag = document.createElement('span');
+      tag.className = 'today-tag';
+      tag.textContent = '(Today)';
+      daySpan.appendChild(tag);
+    }
+  });
+})();
+</script>
+</body>
+</html>

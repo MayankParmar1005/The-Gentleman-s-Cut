@@ -7,7 +7,7 @@
     "dev": "vite",
     "build:skip-bindings": "vite build && pnpm copy:env",
     "build": "vite build && pnpm copy:env",
-    "copy:env": "cp env.json dist/",
+    "copy:env": "test -f env.json || echo '{}' > env.json && cp env.json dist/",
     "typecheck": "tsc --noEmit --pretty",
     "check": "biome check src",
     "fix": "biome check --write src"
